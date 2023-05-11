@@ -1,0 +1,131 @@
+Tela_ListaAcervo As screen:
+
+    "Gallery_ListaAcervo As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =929
+        Items: =Filter(Cadastro,StartsWith(ID,pesquisa_2.Text))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =165
+        Y: =202
+        ZIndex: =1
+
+        Image9 As image:
+            Height: =143
+            Image: |-
+                =Concatenate("https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=",ThisItem.ID)
+            OnSelect: =Select(Parent)
+            Width: =152
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title6 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="ID:"&ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =224
+            X: =Image9.X + Image9.Width + 24
+            Y: =26
+            ZIndex: =2
+
+        Subtitle6 As label:
+            Height: =59
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Nme_Peca
+            VerticalAlign: =VerticalAlign.Top
+            Width: =249
+            X: =Title6.X
+            Y: =72
+            ZIndex: =3
+
+        Separator6 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Subtitle6_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Nme_Cor
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title6.Width
+            X: =Title6.X
+            Y: =116
+            ZIndex: =6
+
+        Image9_1 As image:
+            Height: =105
+            Image: =ThisItem.Foto
+            OnSelect: =Select(Parent)
+            Visible: =!Tela_ListaAcervo.Printing
+            Width: =119
+            X: =477
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =7
+
+    Label9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        Size: =21
+        Text: ="Lista de acervo cadastrado"
+        Width: =640
+        ZIndex: =2
+
+    Icon19 As icon.Print:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =49
+        Icon: =Icon.Print
+        OnSelect: =Print()
+        X: =565
+        Y: =13
+        ZIndex: =3
+
+    pesquisa_2 As text:
+        Default: =BarcodeScanner2.Value
+        Height: =63
+        HintText: ="Procurar por"
+        Size: =21
+        Visible: =!Tela_ListaAcervo.Printing
+        Width: =300
+        X: =18
+        Y: =93
+        ZIndex: =4
+
+    Icon13_1 As icon.Search:
+        Height: =54
+        Icon: =Icon.Search
+        Visible: =!Tela_ListaAcervo.Printing
+        Width: =40
+        X: =278
+        Y: =97
+        ZIndex: =5
+
+    Icon17_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =49
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =56
+        X: =18
+        Y: =13
+        ZIndex: =6
+

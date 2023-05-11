@@ -1,0 +1,467 @@
+"Tela_Saida As screen.'printableLayout_A4Landscape_ver1.0'":
+    Height: =794
+    Width: =1123
+
+    "peca_selecionada As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderThickness: =4
+        DisplayMode: =DisplayMode.View
+        Height: =595
+        Items: =Gallery1_Acervo.Selected
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =595
+        Width: =539
+        X: =21
+        Y: =150
+        ZIndex: =1
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(186, 202, 226, 1)
+            Height: =274
+            OnSelect: =Select(Parent)
+            Width: =542
+            Y: =116
+            ZIndex: =1
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(172, 62, 11, 1)
+            Fill: =RGBA(186, 202, 226, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Peça selecionada:"
+            Width: =542
+            Y: =10
+            ZIndex: =2
+
+        Image4 As image:
+            Height: =179
+            Image: =ThisItem.Foto
+            OnSelect: =Select(Parent)
+            Width: =331
+            X: =84
+            Y: =416
+            ZIndex: =3
+
+        PecaSelecionado As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Peca
+            VerticalAlign: =VerticalAlign.Top
+            Width: =256
+            X: =172
+            Y: =201
+            ZIndex: =5
+
+        Subtitle2_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Cor
+            VerticalAlign: =VerticalAlign.Top
+            Width: =169
+            X: =172
+            Y: =258
+            ZIndex: =7
+
+        Subtitle2_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Tamanho.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =56
+            X: =428
+            Y: =265
+            ZIndex: =8
+
+        Subtitle2_3 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Marca
+            VerticalAlign: =VerticalAlign.Top
+            Width: =338
+            X: =172
+            Y: =309
+            ZIndex: =9
+
+        Label1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =79
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Peça:"
+            Width: =117
+            X: =35
+            Y: =179
+            ZIndex: =10
+
+        Label1_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Cor:"
+            Width: =117
+            X: =35
+            Y: =256
+            ZIndex: =11
+
+        Label1_3 As label:
+            Align: =Align.Right
+            FontWeight: =FontWeight.Semibold
+            Height: =61
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Marca:"
+            Width: =117
+            X: =35
+            Y: =297
+            ZIndex: =12
+
+        Label1_4 As label:
+            Align: =Align.Right
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Tam:"
+            Width: =91
+            X: =323
+            Y: =261
+            ZIndex: =13
+
+        ID_Selecionado As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =256
+            X: =172
+            Y: =138
+            ZIndex: =14
+
+        Label1_5 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =79
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: ="ID"
+            Width: =117
+            X: =35
+            Y: =116
+            ZIndex: =15
+
+    Form2 As form:
+        DataSource: =Entrega
+        DefaultMode: =FormMode.New
+        Height: =578
+        Width: =492
+        X: =587
+        Y: =84
+        ZIndex: =2
+
+        Apresentador_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Apresentador"
+            Default: =ThisItem.Apresentador
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Entrega],DataSourceInfo.DisplayName,"Apresentador")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =NomeApresentador.Selected
+            Width: =492
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            NomeApresentador As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["DisplayName","Email","Picture"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                InputTextPlaceholder: ="Selecione usuário"
+                Items: =Choices([@Entrega].Apresentador)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["DisplayName"]
+                SearchItems: =Choices(Entrega.Apresentador,NomeApresentador.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Template: =ListItemTemplate.Person
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =NomeApresentador.Y + NomeApresentador.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                Height: =DataCardKey14.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+        Programa_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Programa"
+            Default: =ThisItem.Programa
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Entrega],DataSourceInfo.DisplayName,"Programa")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =147
+            MaxLength: =DataSourceInfo([@Entrega], DataSourceInfo.MaxLength, "Programa")
+            Required: =false
+            Update: |
+                =
+            Width: =492
+            X: =0
+            Y: =1
+            ZIndex: =3
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+        Data_Utilizacao_DataCard1 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Data_Uso"
+            Default: =ThisItem.Data_Utilizacao
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Entrega],DataSourceInfo.DisplayName,"Data_Uso")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =163
+            Required: =false
+            Update: =DataUso.SelectedDate
+            Width: =492
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="Data de uso"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataUso As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =70
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =249
+                X: =30
+                Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataUso.Y + DataUso.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =DataCardKey17.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+    Nome_Programa As dropdown:
+        Height: =70
+        Items: =Programa
+        Size: =21
+        Width: =444
+        X: =616
+        Y: =284
+        ZIndex: =3
+
+    Label3 As label:
+        Align: =Align.Center
+        Fill: =RGBA(186, 202, 226, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =69
+        Size: =24
+        Text: ="Registrar peça"
+        Width: =1123
+        ZIndex: =4
+
+    Icon7 As icon.Send:
+        Color: =RGBA(102, 113, 166, 1)
+        Height: =51
+        Icon: =Icon.Send
+        OnSelect: |+
+            =If( IsBlank(NomeApresentador.Selected),Notify("Todos os campos devem preenchidos!",NotificationType.Error),Icon.Cancel
+            
+            ;
+            Patch(
+                Entrega,
+                Defaults(Entrega),
+               
+                {
+                    Peca: Gallery1_Acervo.Selected.Nme_Peca,
+                    ID_Peca: Gallery1_Acervo.Selected.ID,
+                    Data_Utilizacao:DataUso.SelectedDate,
+                    Programa:Nome_Programa.SelectedText.Value,
+                    
+                    Apresentador: NomeApresentador.Selected 
+                    
+                  
+                   
+                }
+            
+            );
+            UpdateContext({varNovoStatus: "Em uso"});
+            Patch(
+                Cadastro,
+                LookUp(
+                    Cadastro,
+                    Gallery1_Acervo.Selected.ID = ID
+                ),
+                {Status_Entrega: varNovoStatus} 
+            ));
+            
+            
+        X: =1059
+        Y: =9
+        ZIndex: =5
+
+    Icon11 As icon.BackArrow:
+        Color: =RGBA(102, 113, 166, 1)
+        Height: =55
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Y: =5
+        ZIndex: =6
+
