@@ -1,0 +1,35 @@
+{
+  "ccdb8164-67bf-4be6-9b1d-85294db8339f": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://lbvlab.sharepoint.com/sites/Camarim": {
+        "dataSources": {
+          "Cadastro": {
+            "tableName": "511a4ae2-3827-4136-afec-c53e0320f7ee"
+          },
+          "Entrega": {
+            "tableName": "8ef011d7-b423-4569-bcf7-4c9bca94b74a"
+          },
+          "Programa": {
+            "tableName": "2323730c-2e43-4a84-8f8e-b6d10877df54"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Cadastro",
+      "Entrega",
+      "Programa"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ccdb8164-67bf-4be6-9b1d-85294db8339f"
+  }
+}

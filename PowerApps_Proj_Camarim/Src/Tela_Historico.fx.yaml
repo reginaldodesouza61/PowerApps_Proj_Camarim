@@ -1,0 +1,367 @@
+"Tela_Historico As screen.'printableLayout_A4Landscape_ver1.0'":
+    Height: =794
+    Width: =1123
+
+    "peca_selecionada_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderThickness: =4
+        DisplayMode: =DisplayMode.View
+        Height: =595
+        Items: =Gallery1_Acervo.Selected
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =595
+        Width: =539
+        X: =4
+        Y: =86
+        ZIndex: =1
+
+        Rectangle2_1 As rectangle:
+            Fill: =RGBA(186, 202, 226, 1)
+            Height: =274
+            OnSelect: =Select(Parent)
+            Width: =539
+            Y: =116
+            ZIndex: =1
+
+        Label2_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(172, 62, 11, 1)
+            Fill: =RGBA(186, 202, 226, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Peça selecionada:"
+            Width: =539
+            Y: =10
+            ZIndex: =2
+
+        Image4_1 As image:
+            Height: =179
+            Image: =ThisItem.Foto
+            OnSelect: =Select(Parent)
+            Width: =331
+            X: =84
+            Y: =416
+            ZIndex: =3
+
+        PecaSelecionado_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Peca
+            VerticalAlign: =VerticalAlign.Top
+            Width: =256
+            X: =172
+            Y: =201
+            ZIndex: =5
+
+        Separator2_1 As rectangle:
+            Height: =0
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Subtitle2_4 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Cor
+            VerticalAlign: =VerticalAlign.Top
+            Width: =169
+            X: =172
+            Y: =258
+            ZIndex: =7
+
+        Subtitle2_5 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Tamanho.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =56
+            X: =428
+            Y: =265
+            ZIndex: =8
+
+        Subtitle2_6 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.Nme_Marca
+            VerticalAlign: =VerticalAlign.Top
+            Width: =338
+            X: =172
+            Y: =309
+            ZIndex: =9
+
+        Label1_6 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =79
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Peça:"
+            Width: =117
+            X: =35
+            Y: =179
+            ZIndex: =10
+
+        Label1_7 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Cor:"
+            Width: =117
+            X: =35
+            Y: =256
+            ZIndex: =11
+
+        Label1_8 As label:
+            Align: =Align.Right
+            FontWeight: =FontWeight.Semibold
+            Height: =61
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Marca:"
+            Width: =117
+            X: =35
+            Y: =297
+            ZIndex: =12
+
+        Label1_9 As label:
+            Align: =Align.Right
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: |-
+                ="Tam:"
+            Width: =91
+            X: =323
+            Y: =261
+            ZIndex: =13
+
+        ID_Selecionado_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =24
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =256
+            X: =172
+            Y: =138
+            ZIndex: =14
+
+        Label1_10 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =79
+            OnSelect: =Select(Parent)
+            Size: =24
+            Text: ="ID"
+            Width: =117
+            X: =35
+            Y: =116
+            ZIndex: =15
+
+    Label3_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(186, 202, 226, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =49
+        Size: =24
+        Text: ="Detalhes da peça selecionada"
+        Width: =1123
+        ZIndex: =4
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(186, 202, 226, 1)
+        BorderThickness: =3
+        Height: =680
+        Items: =Filter(Entrega,ID_Peca = Gallery1_Acervo.Selected.ID)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =201
+        Width: =539
+        X: =570
+        Y: =100
+        ZIndex: =5
+
+        Title10 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            X: =192
+            Y: =20
+            ZIndex: =2
+
+        Subtitle9 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Apresentador.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =347
+            X: =192
+            Y: =58
+            ZIndex: =3
+
+        Separator10 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Subtitle9_1 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Data_Utilizacao
+            VerticalAlign: =VerticalAlign.Top
+            Width: =197
+            X: =Title10.X
+            Y: =92
+            ZIndex: =6
+
+        Subtitle9_2 As label:
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Data_Devolucao
+            VerticalAlign: =VerticalAlign.Top
+            Width: =197
+            X: =Title10.X
+            Y: =134
+            ZIndex: =7
+
+        Subtitle9_3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Status.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title10.Width
+            X: =Title10.X
+            Y: =171
+            ZIndex: =8
+
+        Label11 As label:
+            Height: =48
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="ID:"
+            Width: =100
+            X: =11
+            Y: =12
+            ZIndex: =9
+
+        Label11_1 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Apresentador:"
+            Width: =181
+            X: =11
+            Y: =52
+            ZIndex: =10
+
+        Label11_2 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Data de uso:"
+            Width: =181
+            X: =11
+            Y: =90
+            ZIndex: =11
+
+        Label11_3 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Devolução:"
+            Width: =181
+            X: =11
+            Y: =130
+            ZIndex: =12
+
+        Label11_4 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Situação:"
+            Width: =181
+            X: =11
+            Y: =168
+            ZIndex: =13
+
+    Icon8 As icon.DetailList:
+        Height: =52
+        Icon: =Icon.DetailList
+        Width: =42
+        X: =4
+        ZIndex: =6
+
+    Icon10 As icon.BackArrow:
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =41
+        X: =1067
+        Y: =4
+        ZIndex: =7
+
